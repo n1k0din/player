@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Пример подключения плеера | dvmn</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+  <style type="text/css">
+    .buttons {
+      display: flex;
+      background-color: black;
+    }
+
+    #player {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      height: 600px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+
+    .full-space {
+      flex-grow: 1;
+    }
+
+    .player-button {
+      flex-grow: 0;
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+      font-size: xx-large;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="player">
+    <div class="js-video-container full-space"></div>
+    <div class="buttons">
+      <button class="player-button js-play-button" type="button" name="button"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button class="player-button js-pause-button" type="button" name="button" hidden><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <button class="player-button js-mute-button" type="button" name="button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+      <button class="player-button js-volume-button" type="button" name="button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      <div class="full-space"></div>
+      <button class="player-button js-fullscreen-button" type="button" name="button"><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="static/player.js"></script>
+
+  <script type="text/javascript">
+    createPlayer({
+      elementId: 'player'
+    });
+  </script>
+
+</body>
+
+</html>
