@@ -1,6 +1,6 @@
 # Вёрстка простого плеера
 
-Мониторит изменение `index.html` и показывает свёрстанный плеер по адресу [127.0.0.1:5500](http://127.0.0.1:5500).Пример можно посмотреть на [github pages](https://n1k0din.github.io/player).
+Мониторит изменение `index.html` и показывает свёрстанный плеер по адресу [127.0.0.1:5500](http://127.0.0.1:5500). Пример можно посмотреть на [github pages](https://n1k0din.github.io/player).
 ![Player screenshot](media/21.png)
 
 
@@ -25,13 +25,13 @@ venv\Scripts\activate.bat
  ```
  source venv/bin/activate
  ```
-4. Установите необходимые пакеты
+4. Установите `livereload`
 ```bash
 pip install -r requirements.txt
 ```
 5. Запустите
 ```bash
-python main.py
+livereload .
 ```
 
 6. Наслаждайтесь по адресу [127.0.0.1:5500](http://127.0.0.1:5500).
